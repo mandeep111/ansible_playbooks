@@ -2,7 +2,11 @@
 
 [![NepLab](http://neplab.com/wp-content/uploads/2016/02/neplab-logo-retina.png)](https://support.neplab.com) 
 
+
+
 Install JDK 1.8 or above on Linux Box
+
+
 # Compatibility
 
 This playbook should work for all rpm based linux RedHat, CentOS, 
