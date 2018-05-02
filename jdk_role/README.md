@@ -3,11 +3,11 @@
 [![NepLab](http://neplab.com/wp-content/uploads/2016/02/neplab-logo-retina.png)](https://support.neplab.com) 
 
 
-
+## Description
 Install JDK 1.8 or above on Linux Box
 
 
-# Compatibility
+## Compatibility
 
 This playbook should work for all rpm based linux RedHat, CentOS, 
 
@@ -30,4 +30,4 @@ email neplab.supp at gmail dot com
 ## Dependencies
 
 
-## Complete example 
+## Usage
