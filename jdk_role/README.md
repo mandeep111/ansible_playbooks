@@ -9,7 +9,7 @@ Install JDK 1.8 or above on Linux Box
 
 ## Compatibility
 
-only works with RHEL 64 bit > 6.9 OS Version
+
 
 ## Author
 
@@ -31,8 +31,4 @@ None
 
 ## Usage
 
-- Clone the main.yml file
-- Change the java version to the one that you'd like
-- Execute command:
 
-ansible-playbook -inventory DEV main.yml 

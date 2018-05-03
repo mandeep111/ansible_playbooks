@@ -1,4 +1,0 @@
-role:
-	install jdk
-package: jdk_1.8.44....
-state: installed
