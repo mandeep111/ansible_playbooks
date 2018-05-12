@@ -9,7 +9,7 @@ Install JDK 1.8 or above on Linux Box
 
 ## Compatibility
 
-Only works with CentOS(7) 64 bit.
+Tested for different version of CentOS and Ubuntu machines.
 
 ## Author
 
@@ -31,7 +31,6 @@ None
 
 ## Usage
 
-- Clone the jdk.yaml file
 - Change the java version to the one you'd like.
-- Execute command: ansible-playbook jdk.yaml
+- For more details, go to: https://support.neplab.com/wiki
 
