@@ -1,0 +1,35 @@
+--- #Installing jdk1.8 or above on linux box using ansible  
+
+ - hosts: centos
+   remote_user: ansible
+   become_method: sudo
+   become: yes
+   connection: ssh
+   gather_facts: yes
+   tasks:
+          - name: get JDK tarball file
+            command: curl -L  -H 'Cookie:oraclelicense=accept-securebackup-cookie'  -o {{jdk-version.rpm}} {{jdk-version-download_url}}
+
+          - name: Install JDK
+            command: rpm --force -Uvh jdk-8u171-linux-x64.rpm
+
+ - hosts: ubuntu
+   remote_user: ansible
+   become_method: sudo
+   become: yes
+   connection: ssh
+   gather_facts: yes
+   tasks:
+       - name: add repository
+         command: add-apt-repository ppa:webupd8team/java
+       - name: update repository
+         command: apt-get update
+       - name: Accept Java {{version}} License
+         debconf: name='oracle-java{{version}}-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+       - name: install java
+         command: apt-get install java-common oracle-java{{version}}-installer
+       - name: set default
+         command: apt-get install oracle-java{{version}}-set-default
+         when:
+             - ansible_distribution == "Ubuntu"
+
